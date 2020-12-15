@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+
+.pan{
+	width:400px;
+	background:#A7D874;
+}
+
+.panNuevo{
+	width:300px;
+	background:#6DCDCB;
+}
+
+.back{
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+
+	
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+
+<h:head>
+<link rel="stylesheet" href="Css/style.css"> </link>
+	<title>Mi primer JSF</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+		
+		<p:panel header="Inicio de sesión" class="pan">
+        <h3>Usuario</h3>
+		<p:inputText value="#{usuarioBean.nombre}"></p:inputText>
+		<br></br>
+		<h3>Contraseña</h3>
+		<p:inputText type="password" value="#{usuarioBean.clave}"></p:inputText>
+		<br></br>
+		<br></br>
+		<p:commandButton value="Ingresar" action="#{usuarioBean.ver}"  ajax="false" ></p:commandButton>
+        <p:commandButton value="Nuevo" action="#{usuarioBean.agregarNuevo}" ajax="false" ></p:commandButton>          
+		<p:commandButton value="Usuarios"  action="#{usuarioBean.mostrarLista}" ajax="false" ></p:commandButton>          
+		
+            </p:panel>
+		
+       </h:form>
+       
+    </h:body>
+
+</html>

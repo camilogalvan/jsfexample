@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+    version="2.3">
+    
+ 
+<navigation-rule>
+  <from-view-id>index.xhtml</from-view-id>
+
+  <navigation-case>
+   <from-action>#{usuarioBean.ver}</from-action>
+   <from-outcome>ingreso</from-outcome>
+   <to-view-id>home.xhtml</to-view-id>
+  </navigation-case>
+  
+  <navigation-case>
+  <from-action>#{usuarioBean.ver}</from-action>
+   <from-outcome>usuarioIncorrecto</from-outcome>
+   <to-view-id>incorrecto.xhtml</to-view-id>
+  </navigation-case>
+  
+  <navigation-case>
+  <from-action>#{usuarioBean.ver}</from-action>
+   <from-outcome>claveIncorrecta</from-outcome>
+   <to-view-id>clave.xhtml</to-view-id>
+  </navigation-case> 
+ 
+  <navigation-case>
+  <from-action>#{usuarioBean.agregarNuevo}</from-action>
+   <from-outcome>agregaNuevo</from-outcome>
+   <to-view-id>nuevo.xhtml</to-view-id>
+  </navigation-case>
+  
+  <navigation-case>
+  <from-action>#{usuarioBean.mostrarLista}</from-action>
+   <from-outcome>MuestreLista</from-outcome>
+   <to-view-id>usuarios.xhtml</to-view-id>
+  </navigation-case>
+
+  
+ </navigation-rule>
+
+ <navigation-rule>
+  <from-view-id>nuevo.xhtml</from-view-id>
+    
+  <navigation-case>
+    <from-action>#{usuarioBean.agregar}</from-action>
+   <from-outcome>agregado</from-outcome>
+   <to-view-id>index.xhtml</to-view-id>
+  </navigation-case>
+  
+ </navigation-rule>
+  
+
+
+</faces-config>
